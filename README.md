@@ -30,40 +30,37 @@ The system is designed to be modular, scalable, and production-ready.
 
 ## 📂 Project Structure
 MLOps_Lab_7/
-
-├── models/
+│
+├── configs/ # Configuration files
+│
+├── models/ # Saved models & preprocessing objects
 │ ├── best_model.pkl
 │ ├── scaler.pkl
-| |──columns.json
-│ ├── num_cols.json
-|
-├── notebooks/
+│ ├── columns.json
+│ └── num_cols.json
+│
+├── notebooks/ # Experimentation & development
 │ ├── 00_data_splits.ipynb
 │ ├── 01_EDA_cleaning.ipynb
 │ ├── 02_feature_eng_encoding.ipynb
 │ ├── 03_model_training_mlflow.ipynb
-│ ├── mlruns/
+│ ├── mlruns/ # MLflow experiment logs
 │ └── mlflow.db
 │
-├── data/
-│ ├── housing_data.csv
-│ ├── test.csv
-│ ├── train_clean.csv
-│ ├── train.csv
-│ ├── X_test.csv
-│ └── X_train.csv
-│ ├── y_train.csv
-│ ├── y_test.csv
-|
-├── src/
-│ ├── api/
+├── src/ # Production-level code
+│ ├── api/ # FastAPI application
 │ │ └── main.py
-│ ├── inference_pipeline/
+│ │
+│ ├── inference_pipeline/ # Prediction logic
 │ │ └── predict.py
+│ 
+
 │
-├── Dockerfile
-├── requirements.txt
+├── Dockerfile # API container
+├── requirements.txt # Dependencies
+├── .github/workflows/ci.yml # CI/CD pipeline
 └── README.md
+
 
 
 ---
